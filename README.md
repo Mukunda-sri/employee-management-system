@@ -21,6 +21,10 @@ A full-stack Employee Management System built using HTML, CSS, JavaScript, Node.
 - MySQL
 - Postman
 - GitHub
+## Screenshot
 
+### Home Page
+
+![Employee Management System](images/home-page.png)
 ## Author
 Mukunda Sri Chilukuri
