@@ -20,7 +20,24 @@ app.get("/employees", (req, res) => {
     }
   });
 });
+app.post("/employees", (req, res) => {
+  const { name, email, department, salary } = req.body;
 
+  const sql =
+    "INSERT INTO employees (name, email, department, salary) VALUES (?, ?, ?, ?)";
+
+  db.query(
+    sql,
+    [name, email, department, salary],
+    (err, result) => {
+      if (err) {
+        res.status(500).send(err);
+      } else {
+        res.send("Employee added successfully");
+      }
+    }
+  );
+});
 app.listen(5000, () => {
   console.log("Server running on port 5000");
 });
